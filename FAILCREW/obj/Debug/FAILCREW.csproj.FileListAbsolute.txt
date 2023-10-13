@@ -1,0 +1,15 @@
+C:\Users\student\Desktop\FAILCREW\FAILCREW\bin\Debug\FAILCREW.exe.config
+C:\Users\student\Desktop\FAILCREW\FAILCREW\bin\Debug\FAILCREW.exe
+C:\Users\student\Desktop\FAILCREW\FAILCREW\bin\Debug\FAILCREW.pdb
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.csproj.AssemblyReference.cache
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\MainWindow.g.cs
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\App.g.cs
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW_MarkupCompile.cache
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW_MarkupCompile.lref
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\MainWindow.baml
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.g.resources
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.Properties.Resources.resources
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.csproj.GenerateResource.cache
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.csproj.CoreCompileInputs.cache
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.exe
+C:\Users\student\Desktop\FAILCREW\FAILCREW\obj\Debug\FAILCREW.pdb

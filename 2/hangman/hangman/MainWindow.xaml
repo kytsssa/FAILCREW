@@ -1,0 +1,57 @@
+﻿<Window x:Class="hangman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hangman"
+        mc:Ignorable="d"
+        Title="Hangman" Height="400" Width="627.2"
+        ResizeMode="CanMinimize">
+
+    <Grid Name="Grid">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="244.8" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="147.2" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+
+        <Button Name="StartButton" Background="BlanchedAlmond" FontFamily="Constantia" Content="Пуск!" Margin="20,64.2,0,0" Click="StartButtonClick" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left"  Width="100" Grid.Row="1"/>
+        <ListBox x:Name="CharList" FontFamily="Constantia" FontSize="15" HorizontalAlignment="Left" Margin="22,10,0,9.8" Width="98"/>
+        <Button Name="GuessButton" Background="Khaki" FontFamily="Constantia" Content="Выбрать" Margin="20,2.2,0,0" Click="GuessButtonClick" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="35" Grid.Row="1"/>
+        <Canvas Name="HangAll" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,-16,0,0" Height="0" Width="0">
+            <!--<Canvas x:Name="HangGround" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="130" Background="Black" Canvas.Left="218" Canvas.Top="221"/>-->
+            <Line x:Name="HangGround" X1="0" Y1="0"  X2="130" Y2="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Stroke="Black" StrokeThickness="7" Canvas.Left="214" Canvas.Top="223"/>
+            <Line x:Name="HangRope" X1="0" Y1="0"  X2="6" Y2="28" Canvas.Left="265" Canvas.Top="30"  StrokeThickness="3" Stroke="#FFA99494"/>
+            <Canvas x:Name="HangBar">
+                <Line x:Name="HangStand" X1="0" Y1="0"  X2="0" Y2="200" Canvas.Left="216" Canvas.Top="26" Stroke="Black" StrokeThickness="6"/>
+                <Line x:Name="HangTop" X1="-5" Y1="0"  X2="80" Y2="0" Canvas.Left="219" Canvas.Top="28"  Stroke="Black" StrokeThickness="6"/>
+            </Canvas>
+            <Canvas Name="HangHeadCan">
+                <Ellipse Name="HangHead" Height="38" Canvas.Left="261" Stroke="Black" StrokeThickness="2" Canvas.Top="54" Width="38"/>
+            </Canvas>
+            <Line Name="HangBody" X1="0" Y1="0"  X2="-6" Y2="75" Canvas.Left="267" Canvas.Top="86" Stroke="Black" StrokeThickness="2" RenderTransformOrigin="0.5,0.5"/>
+
+            <Canvas Name="HangHands">
+                <Line Name="HangLHand" X1="0" Y1="0"  X2="24" Y2="-7"  Canvas.Left="242" Canvas.Top="119" Stroke="Black" StrokeThickness="2" RenderTransformOrigin="0.5,0.5"/>
+                <Line Name="HangRHand" X1="0" Y1="0"  X2="10" Y2="25"  Canvas.Left="264" Canvas.Top="111" Stroke="Black" StrokeThickness="2" RenderTransformOrigin="0.5,0.5"/>
+            </Canvas>
+            <Canvas Name="HangLegs">
+                <Line Name="HangLLeg" X1="10" Y1="20" X2="25" Y2="-10" Canvas.Left="236" Canvas.Top="169" Stroke="Black" StrokeThickness="2" RenderTransformOrigin="0.5,0.5"/>
+                <Line Name="HangRLeg" X1="10" Y1="-14" X2="15" Y2="25" Canvas.Left="252" Canvas.Top="173" Stroke="Black" StrokeThickness="2" RenderTransformOrigin="0.5,0.5"/>
+            </Canvas>
+
+        </Canvas>
+        <Label FontSize="15" Content="" Name="ShowWrongGuesses" Margin="402,182,0,0" Height="49" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
+        <Label FontSize="15" Content="Оставшиеся жизни:" FontFamily="Constantia" Margin="255,182,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="29" Width="154"/>
+        <TextBlock Grid.Column="1" FontSize="14" FontFamily="Constantia" HorizontalAlignment="Left" Margin="248.8,10,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Height="26" Width="145"/>
+        <Label Content="Угадай слово:" FontSize="14" FontFamily="Constantia" Grid.Column="1" HorizontalAlignment="Left" Margin="9.8,33.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Name="TheWord" FontSize="30" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="115.8,12.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Name="About" Background="Goldenrod" Content="О разработчике" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="357,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="103" Click="AboutButtonClick"/>
+
+    </Grid>
+</Window>

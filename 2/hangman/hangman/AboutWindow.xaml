@@ -1,0 +1,14 @@
+﻿<Window x:Class="hangman.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hangman"
+        mc:Ignorable="d"
+        Title="About" Height="174.206" Width="256.33"
+        WindowStyle="ToolWindow">
+    <Grid>
+        <Label FontFamily="Georgia" FontSize="15" Content="The HANGMAN Game&#xA;&#xA;Author: @poyea" HorizontalAlignment="Center" VerticalAlignment="Top" Height="89" Width="214" Margin="10,28,0,0"/>
+
+    </Grid>
+</Window>

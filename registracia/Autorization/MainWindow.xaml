@@ -1,0 +1,63 @@
+﻿<Window x:Class="Autorization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autorization"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="600" >
+
+    <Grid Background="Bisque" Margin="0,0,0,1">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="273*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.ColumnSpan="2" Margin="-26,-192,0,-151" Source="/1a39cb0d-16d3-4b08-918e-20f5fec839c2.jpg" Stretch="Fill"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="142,16,0,0" x:Name="textBlockHeading" VerticalAlignment="Top" Width="110"  FontSize="17" FontStretch="ExtraCondensed" Grid.Column="1"><Run Language="ru-ru" Text="Регистрация"/><Run Text=":"/></TextBlock>
+        <Grid Margin="41,10,95,17" Background="White" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="439*"/>
+                <ColumnDefinition Width="28*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="252*" />
+            </Grid.RowDefinitions>
+            <TextBlock Height="20" HorizontalAlignment="Left" Margin="67,0,0,0" x:Name ="errormessage" VerticalAlignment="Top" Width="247"  OpacityMask="Crimson" Foreground="#FFE5572C" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" x:Name="textBlockFirstname" VerticalAlignment="Top" Width="110" ><Run Language="ru-ru" Text="Имя"/><Run Text=":"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" x:Name="textBlockLastName" VerticalAlignment="Top" Width="110" ><Run Language="ru-ru" Text="Фамилия"/><Run Text=":"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" x:Name="textBlockEmailId" VerticalAlignment="Top" Width="110" ><Run Language="ru-ru" Text="Почта:"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,107,0,0" x:Name="textBlockPassword" VerticalAlignment="Top" Width="110"  ><Run Language="ru-ru" Text="Пароль"/><Run Text=":"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,136,0,0" x:Name="textBlockConfirmPwd" VerticalAlignment="Top" Width="110" ><Run Language="ru-ru" Text="Повторите пароль"/><Run Text=":"/></TextBlock>
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,166,0,0" x:Name="textBlockAddress" VerticalAlignment="Top" Width="110" ><Run Language="ru-ru" Text="Адрес:"/></TextBlock>
+            <TextBox Height="23" Margin="183,20,25,0" x:Name="textBoxFirstName" VerticalAlignment="Top" />
+            <TextBox Height="23" Margin="183,50,25,0" x:Name="textBoxLastName" VerticalAlignment="Top" />
+            <TextBox Height="23" Margin="183,80,25,0" x:Name="textBoxEmail" VerticalAlignment="Top" />
+            <PasswordBox Height="23" Margin="183,107,25,0" x:Name="passwordBox1" VerticalAlignment="Top" />
+            <PasswordBox Height="22" Margin="183,135,25,0" x:Name="passwordBoxConfirm" VerticalAlignment="Top" />
+            <TextBox Height="22" Margin="183,0,25,52" x:Name="textBoxAddress" VerticalAlignment="Bottom" />
+            <Button Content="ОК" Height="23" HorizontalAlignment="Left" Margin="183,204,0,0" x:Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
+            <Button Content="Сброс" Height="23" HorizontalAlignment="Left" Margin="259,204,0,0" x:Name="button2" VerticalAlignment="Top" Width="70" Click="button2_Click" />
+            <Button Content="Отмена" Height="23" HorizontalAlignment="Left" Margin="341,204,0,0" x:Name="button3" VerticalAlignment="Top" Width="70" Click="button3_Click" />
+        </Grid>
+        <Button Margin="35,298,465,59" Content="Login" Cursor="Hand" Click="Login_Click" Grid.Column="1">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <TextBlock TextDecorations="Underline"><InlineUIContainer>  
+                            <ContentPresenter />
+                        </InlineUIContainer></TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Foreground" Value="Navy" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="Red" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

@@ -8,11 +8,7 @@ namespace hangman
     {
         private static readonly List<string> WordList = new List<string>();
 
-        /* We can add new words to WordList below.
-         * Each time the player starts a new game,
-         * a random word is taken from WordList.
-         * Take one word when the game starts.
-         */
+     
         private static Word wordPack;
         public static Word WordPack
         {
@@ -27,12 +23,6 @@ namespace hangman
         }
 
         public string TheWord { get; private set; }
-
-        /*
-         * Static constructor for loading all
-         * the words into the static List<string> 
-         * WordList.
-         */
 
         private Word()
         {

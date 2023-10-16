@@ -5,19 +5,14 @@ using System.Windows.Media;
 
 namespace hangman
 {
-    /* Author: @poyea
-     * https://github.com/poyea
-     * 
-     */
     public partial class MainWindow : Window
     {
         private List<Label> ListofLabel;
         private List<Canvas> ListofBar;
-        /* The above is for the word display */
-        private List<UIElement> TheHangMan; /*The hangman as a whole*/
+        private List<UIElement> TheHangMan;
         private readonly TextBlock WrongBox;
-        private string WordNow; /* store the current word to be guessed */
-        private int WrongGuesses; /* number of wrong guesses now */
+        private string WordNow;
+        private int WrongGuesses;
         private readonly int MaximumGuess = 7;
         private readonly Word WordInstance = Word.WordPack;
 
@@ -30,14 +25,14 @@ namespace hangman
                 FontSize = 20,
                 TextWrapping = TextWrapping.Wrap
             };
-            /* We hold wrong characters guessed in the WrongBox */
+
             _ = Grid.Children.Add(WrongBox);
             GuessButton.IsEnabled = false;
 
         }
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
-        {   
+        {
             ListofLabel = new List<Label>();
             ListofBar = new List<Canvas>();
             SwapButtonState();
@@ -52,11 +47,11 @@ namespace hangman
             WrongBox.Text = "";
 
             int Space = 0;
-            WordInstance.LoadWord(); /* LoadANewWord */
+            WordInstance.LoadWord();
             WordNow = WordInstance.TheWord;
             foreach (char c in WordNow)
             {
-                /*We make the word display in run time in this loop.*/
+
                 Label lbl = new Label();
                 Canvas can = new Canvas
                 {
@@ -145,7 +140,7 @@ namespace hangman
                 {
                     WrongBox.Text += " " + (char)CharList.SelectedItem;
                     DrawOneStep();
-                    //System.Media.SystemSounds.Asterisk.Play();
+
                 }
                 if (CharList.SelectedItem != null)
                 {
@@ -169,7 +164,7 @@ namespace hangman
                 if (TheHangMan[WrongGuesses].Visibility == Visibility.Hidden)
                 {
                     TheHangMan[WrongGuesses].Visibility = Visibility.Visible;
-                    WrongGuesses++; /* We add one wrong guess when we draw. */
+                    WrongGuesses++;
                     ShowWrongGuesses.Content = MaximumGuess - WrongGuesses;
                     if (WrongGuesses >= MaximumGuess)
                     {
@@ -181,13 +176,6 @@ namespace hangman
                     }
                 }
             }
-        }
-
-        private void AboutButtonClick(object sender, RoutedEventArgs e)
-        {
-            AboutWindow abw = new AboutWindow();
-            abw.Show();
-            About.Visibility = Visibility.Hidden;
         }
     }
 }

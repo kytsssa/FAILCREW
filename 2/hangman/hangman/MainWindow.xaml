@@ -51,7 +51,6 @@
         <TextBlock Grid.Column="1" FontSize="14" FontFamily="Constantia" HorizontalAlignment="Left" Margin="248.8,10,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Height="26" Width="145"/>
         <Label Content="Угадай слово:" FontSize="14" FontFamily="Constantia" Grid.Column="1" HorizontalAlignment="Left" Margin="9.8,33.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Name="TheWord" FontSize="30" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="115.8,12.2,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Name="About" Background="Goldenrod" Content="О разработчике" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="357,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="103" Click="AboutButtonClick"/>
-
+        
     </Grid>
 </Window>
